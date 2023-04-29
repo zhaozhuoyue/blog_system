@@ -1,0 +1,110 @@
+/* 这个文件放多个页面都需要使用的公共样式 */
+/*清楚浏览器的默认样式*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 设置让html的高度和浏览器窗口一样高 */
+    height: 100%;
+}
+
+body {
+    /* 设置让body的高度和html标签一样高 */
+    height: 100%;
+    background-image: url(../img/zyx2.jpg);
+    background-position: center center;/*垂直居中 水平居中*/
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav {
+    /* 导航栏高度普遍是50px */
+    height: 50px;
+    background-color: rgb(50, 50, 50,0.4);
+    color: white;
+    display: flex;/*弹性布局 子元素就会按照弹性布局来排列 
+    (1)子元素不按照块级元素 行内元素的规则来工作 统一排成横行
+    (2)子元素可以使用justify-conten 在水平方向如何排列
+    (3)还可以使用align-items控制元素在垂直方向如何排列 
+    justify-content: fle x-start;/*靠左布局*/
+    align-items: center;/*居中布局*/
+}
+
+.nav img {
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;/*左侧外边距*/
+    margin-right: 10px;
+    border-radius: 20px; 
+}
+.nav .spacer {
+    /* 宽度设置成百分比的形式，以父元素为基准 ，设置当前的尺寸*/
+    width: 70%;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none; /*去掉下划线*/
+    padding: 0 10px;/*垂直方向0 水平方向10*/
+}
+.container {
+    width: 1000px;
+    /* 水平居中 */
+    margin: 0 auto;
+
+    /* 设置高度 */
+    height: calc(100% - 50px);
+     /* 为了使right和left水平方向排列，就需要使用弹性布局 */
+    display: flex;
+    justify-content: space-between;
+    }
+
+.container .container-left {
+    height: 100%;
+    width: 200px;
+    /* background-color: rgb(128, 0, 0); */
+}
+
+.container .container-right {
+    height: 100%;
+    width: 796px;
+    /* background-color: rgb(0, 128, 0); */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    /*如果内容超出范围了，自动添加滚动条*/
+    overflow: auto;
+}
+ 
+.card {
+    background-color: rgb(255, 255, 255,0.8);
+    /* 设置内边距，就是为了让文字和图片不要顶着边界 */
+    padding: 30px;
+    border-radius: 20px;
+}
+.card img{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 10px;
+}
+.card a {
+    /* a默认是行内元素，默认尺寸和内容是一样的 */
+    display: block;
+    text-align: center;
+    color: #999;
+    text-decoration: none;
+    padding: 10px 0;
+}
+.card .counter {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}

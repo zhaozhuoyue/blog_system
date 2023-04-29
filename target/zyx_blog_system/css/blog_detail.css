@@ -1,0 +1,19 @@
+/* 给博客详情页提供样式 */ 
+/* 给博客详情页提供具体的样式 */
+
+.blog-detail h3 {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.blog-detail .date {
+    color: rgb(0, 128, 0);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.blog-detail p {
+    /*首行缩进两个字*/
+    text-indent: 2em;
+}
